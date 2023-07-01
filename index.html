@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALSI</title>
+    <style>
+        *{
+            background-color: rgb(102, 63, 207);
+        }
+        form{
+          
+            
+            background-color:rgb(132, 185, 7);
+            color: rgb(7, 7, 7);
+            align-content: center;
+            width: 400px;
+            height: 300px;
+            align-items: center;
+            font-size: 30px;
+            border: 10px solid orange;
+
+        }
+        
+        form input{
+            background-color: rgb(132, 185, 7);
+            color: rgb(0, 0, 0);
+            align-items: center;
+            height:25px;
+            
+        }
+        div{
+            background-color:rgb(132, 185, 7);
+            align-items: center;
+            text-align: center;
+            
+        }
+        #result{
+            align-items: center;
+            text-align: center;
+            font-size: 33px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(20, 20, 20);
+
+        }
+        h1{
+            text-align: center;
+            color: yellow;
+            transition: 0.4s ease-in-out;
+        }
+        h1:hover{
+            color:white;
+
+        }
+        p{
+            color:  white;
+            font-family:sans-serif;
+            float: right;
+            transition: 0.5s ease-in-out;
+        }
+        p:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>SIMPLE CALULATOR</h1>
+    <center>
+    <form>
+        &nbsp;&nbsp;First&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="number" id="first" size="20px" required><br><br>
+        &nbsp;&nbsp;Second&nbsp;&nbsp;:<input type="number" id="second" size="20px" required><br><br>
+        <div > 
+            <input type="button" onClick="Add()" value="ADD"><br>
+            <input type="button" onClick="Sub()" value="SUB"><br>
+            <input type="button" onClick="Mul()" value="MUL"><br>
+            <input type="button" onClick="Div()" value="DIV"><br>
+    
+       </div>
+
+
+    </form>
+</center>
+    <h3 id="result"></h3>
+    <p>By Prathab</p>
+    
+</body>
+<script>
+    function Add(){
+        first=parseInt(document.getElementById("first").value);
+        second=parseInt(document.getElementById("second").value);
+        add= first+second
+       
+        document.getElementById("result").innerHTML="Result is  ="+add;
+    }
+    function Sub(){
+        first=parseInt(document.getElementById("first").value);
+        second=parseInt(document.getElementById("second").value);
+        sub=first - second
+        document.getElementById("result").innerHTML="Result is  ="+sub;
+    }
+    function Mul(){
+        first=parseInt(document.getElementById("first").value);
+        second=parseInt(document.getElementById("second").value);
+        mul=first * second
+        document.getElementById("result").innerHTML="Result is  ="+mul;
+    }
+    function Div(){
+        first=parseInt(document.getElementById("first").value);
+        second=parseInt(document.getElementById("second").value);
+        div=first / second
+        document.getElementById("result").innerHTML="Result is  ="+div;
+    }
+</script>
+</html>
